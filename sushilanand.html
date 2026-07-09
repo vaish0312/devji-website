@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sushilanand Equipments — Construction Equipment Manufacturer, Kolhapur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#9B2A3C; --maroon-dk:#7f2130; --navy:#1F2C86; --ink:#15181e; --ink-2:#232833;
+    --grey:#6b7280; --line:#e7e9ee; --bg:#ffffff; --bg-soft:#f6f7f9; --wa:#25D366;
+    --radius:16px; --maxw:1180px; --display:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,.display{font-family:var(--display);line-height:1.1;letter-spacing:-.01em}
+  a{text-decoration:none;color:inherit}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .eyebrow{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--maroon)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;transition:.25s ease;cursor:pointer;border:2px solid transparent}
+  .btn-primary{background:var(--maroon);color:#fff}
+  .btn-primary:hover{background:var(--maroon-dk);transform:translateY(-2px);box-shadow:0 10px 24px rgba(155,42,60,.35)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+  .btn-ghost:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+  .btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{filter:brightness(1.1);transform:translateY(-2px)}
+  .btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{filter:brightness(1.06);transform:translateY(-2px)}
+  .sec-head{text-align:center;max-width:700px;margin:0 auto 52px}
+  .sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:700;margin:12px 0 14px}
+  .sec-head p{color:var(--grey);font-size:17px}
+  section.pad{padding:96px 0}
+
+  /* HEADER */
+  header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.3s ease;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.05);padding:13px 0}
+  header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.09);padding:8px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;flex-direction:column;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:.03em;color:var(--navy);line-height:1}
+  .brand small{font-family:'Inter';font-weight:500;font-size:9.5px;letter-spacing:.14em;color:var(--maroon);text-transform:uppercase;margin-top:3px}
+  nav.links{display:flex;align-items:center;gap:28px}
+  nav.links a{font-weight:500;font-size:15px;color:var(--ink);transition:.2s;position:relative}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--maroon);transition:.25s}
+  nav.links a:hover{color:var(--maroon)} nav.links a:hover::after{width:100%}
+  .nav .btn{padding:11px 22px}
+  .hamb{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+  .hamb span{width:26px;height:2.5px;background:var(--ink);border-radius:2px}
+  .mobile-nav{position:fixed;inset:0;background:#fff;z-index:55;transform:translateX(100%);transition:.35s ease;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:40px}
+  .mobile-nav.open{transform:none}
+  .mobile-nav a{font-family:var(--display);font-weight:600;font-size:25px;padding:14px 0;border-bottom:1px solid var(--line)}
+  @media(max-width:860px){nav.links,.nav>.btn{display:none} .hamb{display:flex}}
+
+  /* HERO */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+  .hero-bg{position:absolute;inset:0;background:url('assets/sushil/construction-lift.jpg') center/cover no-repeat;transform:scale(1.05);animation:kb 24s ease-in-out infinite alternate}
+  @keyframes kb{to{transform:scale(1.16)}}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(18,10,12,.94) 0%,rgba(18,10,12,.78) 45%,rgba(18,10,12,.42) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:56px}
+  .hero-inner{max-width:720px}
+  .hero h1{font-size:clamp(36px,5.6vw,62px);font-weight:700;margin:18px 0 20px}
+  .hero h1 .a{color:var(--maroon)}
+  .hero p.lead{font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,.86);max-width:600px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* TRUST */
+  .trust{background:var(--ink);color:#fff}
+  .trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:22px 24px}
+  .trust .item{display:flex;align-items:center;gap:10px;font-weight:500;font-size:15px;color:rgba(255,255,255,.9)}
+  .trust .item b{color:var(--maroon);font-family:var(--display);font-weight:700}
+  .trust .dot{width:7px;height:7px;border-radius:50%;background:var(--maroon)}
+
+  /* ABOUT */
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  @media(max-width:900px){.about{grid-template-columns:1fr;gap:38px}}
+  .about h2{font-size:clamp(28px,4vw,42px);font-weight:700;margin:14px 0 18px}
+  .about p{color:#4b5563;margin-bottom:15px;font-size:16.5px}
+  .checks{list-style:none;margin:22px 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:11px 20px}
+  @media(max-width:520px){.checks{grid-template-columns:1fr}}
+  .checks li{display:flex;align-items:flex-start;gap:10px;font-weight:500;font-size:15px}
+  .checks .tick{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:rgba(155,42,60,.12);color:var(--maroon);display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:2px}
+  .about-facts{background:var(--navy);color:#fff;border-radius:var(--radius);padding:34px 32px;box-shadow:0 26px 54px rgba(31,44,134,.28)}
+  .about-facts .f{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:15px}
+  .about-facts .f:last-child{border-bottom:0}
+  .about-facts .f b{font-family:var(--display);font-weight:600}
+  .about-facts .f span{color:rgba(255,255,255,.7)}
+
+  /* PRODUCTS */
+  .prod-sec{background:var(--bg-soft)}
+  .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  @media(max-width:1000px){.prods{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:760px){.prods{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.prods{grid-template-columns:1fr}}
+  .prod{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s;cursor:pointer}
+  .prod:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(0,0,0,.1);border-color:transparent}
+  .prod .img{aspect-ratio:1/1;overflow:hidden;background:#eee}
+  .prod .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .prod:hover .img img{transform:scale(1.07)}
+  .prod .body{padding:16px 18px}
+  .prod h3{font-size:16px;font-weight:600;margin-bottom:4px}
+  .prod .price{color:var(--maroon);font-weight:700;font-size:14px}
+  .prod .price span{color:var(--grey);font-weight:400}
+
+  /* WHY */
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media(max-width:860px){.why{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.why{grid-template-columns:1fr}}
+  .why-item{text-align:center;padding:10px}
+  .why-ic{width:62px;height:62px;margin:0 auto 16px;border-radius:16px;background:rgba(155,42,60,.1);display:grid;place-items:center;color:var(--maroon)}
+  .why-ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.8}
+  .why-item h4{font-size:17px;font-weight:700;margin-bottom:7px}
+  .why-item p{color:var(--grey);font-size:14.5px}
+
+  /* TESTIMONIAL */
+  .testi{background:var(--navy);color:#fff}
+  .testi .card{max-width:820px;margin:0 auto;text-align:center}
+  .testi .qmark{font-family:var(--display);font-size:76px;line-height:.6;color:var(--maroon);opacity:.7}
+  .testi blockquote{font-family:var(--display);font-weight:500;font-size:clamp(21px,3vw,30px);line-height:1.35;margin:10px 0 24px}
+  .testi .who{font-weight:600}.testi .who span{color:rgba(255,255,255,.6);font-weight:400}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.12)}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+  .c-info{background:var(--ink);color:#fff;padding:46px 42px}
+  .c-info h2{font-size:30px;font-weight:700;margin-bottom:12px}
+  .c-info>p{color:rgba(255,255,255,.72);margin-bottom:26px}
+  .c-line{display:flex;align-items:center;gap:14px;margin-bottom:17px;font-size:15px}
+  .c-line .ci{width:42px;height:42px;flex:0 0 42px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--maroon)}
+  .c-line .ci svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8}
+  .c-line b{display:block;font-family:var(--display)} .c-line span{color:rgba(255,255,255,.6);font-size:13.5px}
+  .c-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .c-form{background:#fff;padding:46px 42px}
+  .c-form h3{font-size:22px;font-weight:700;margin-bottom:6px}
+  .c-form>p{color:var(--grey);font-size:14.5px;margin-bottom:22px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-family:inherit;font-size:15px;transition:.2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--maroon);box-shadow:0 0 0 3px rgba(155,42,60,.12)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  @media(max-width:520px){.field-row{grid-template-columns:1fr}}
+  .c-form .btn{width:100%;justify-content:center;margin-top:6px}
+
+  /* FOOTER */
+  footer{background:#0f1116;color:rgba(255,255,255,.72);padding:54px 0 28px}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand{max-width:340px}
+  .foot-brand .fb-name{font-family:var(--display);font-weight:700;font-size:20px;color:#fff;margin-bottom:8px}
+  .foot-brand .group{display:inline-block;margin-top:12px;font-size:13px;color:var(--maroon);border:1px solid rgba(155,42,60,.5);padding:6px 12px;border-radius:999px}
+  .foot-col h4{color:#fff;font-family:var(--display);font-size:15px;margin-bottom:13px}
+  .foot-col a,.foot-col p{display:block;font-size:14.5px;margin-bottom:9px;color:rgba(255,255,255,.7)}
+  .foot-col a:hover{color:var(--maroon)}
+  .foot-bottom{padding-top:20px;font-size:13px;color:rgba(255,255,255,.5)}
+
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:70;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px rgba(37,211,102,.5);animation:bob 2.6s ease-in-out infinite}
+  .wa-float svg{width:29px;height:29px;fill:#fff}
+  @keyframes bob{50%{transform:translateY(-6px)}}
+
+  .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#home">SUSHILANAND<small>Equipments · Kolhapur</small></a>
+    <nav class="links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+      <a href="index.html" style="color:var(--maroon);font-weight:600">Devji Group ↗</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">Enquire Now</a>
+    <button class="hamb" id="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mnav">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+  <a href="index.html">Devji Group ↗</a><a class="btn btn-primary" href="#contact">Enquire Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="eyebrow reveal">Construction Equipment Manufacturer · Kolhapur</div>
+      <h1 class="reveal d1">Construction equipment, <span class="a">engineered to lift.</span></h1>
+      <p class="lead reveal d2">Sushilanand Equipments manufactures a complete range of construction lifts, hoists, concrete mixers, bar machines and scaffolding — built for the site and delivered on time.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" href="#products">View Our Products →</a>
+        <a class="btn btn-ghost" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust"><div class="wrap">
+  <div class="item"><span class="dot"></span> Established <b>2022</b></div>
+  <div class="item"><span class="dot"></span> <b>Manufacturer</b> &amp; Supplier</div>
+  <div class="item"><span class="dot"></span> <b>Kolhapur</b>, Maharashtra</div>
+  <div class="item"><span class="dot"></span> Part of the <b>Devji Group</b></div>
+</div></div>
+
+<!-- ABOUT -->
+<section class="pad" id="about"><div class="wrap about">
+  <div>
+    <div class="eyebrow reveal">About Us</div>
+    <h2 class="reveal d1">Your dependable partner for construction equipment.</h2>
+    <p class="reveal d1">Sushilanand Equipments is a Kolhapur-based manufacturer and supplier of construction and material-handling equipment, offering the best range of mini construction lifts, rope-suspended platforms, concrete mixers, bar cutting &amp; bending machines and goods lifts — with effective, timely delivery.</p>
+    <p class="reveal d2">Backed by the engineering strength of the Devji group, we build rugged, reliable machines for builders and contractors across the region.</p>
+    <ul class="checks reveal d2">
+      <li><span class="tick">✓</span> Construction Lifts &amp; Hoists</li>
+      <li><span class="tick">✓</span> Concrete Mixers</li>
+      <li><span class="tick">✓</span> Bar Bending &amp; Cutting Machines</li>
+      <li><span class="tick">✓</span> Scaffolding &amp; Centering</li>
+      <li><span class="tick">✓</span> Material Handling</li>
+      <li><span class="tick">✓</span> Sugar &amp; Textile Spares</li>
+    </ul>
+    <a class="btn btn-navy reveal d3" href="#products">Explore Products →</a>
+  </div>
+  <div class="about-facts reveal d2">
+    <div class="f"><b>Nature of Business</b><span>Manufacturer · Partnership</span></div>
+    <div class="f"><b>Established</b><span>2022</span></div>
+    <div class="f"><b>Location</b><span>Kolhapur, Maharashtra</span></div>
+    <div class="f"><b>Product Range</b><span>20+ machines</span></div>
+    <div class="f"><b>Group</b><span>Devji Industries</span></div>
+    <div class="f"><b>Delivery</b><span>Pan-region, on time</span></div>
+  </div>
+</div></section>
+
+<!-- PRODUCTS -->
+<section class="pad prod-sec" id="products"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow reveal">Our Products</div>
+    <h2 class="reveal d1">A complete range for every site.</h2>
+    <p class="reveal d2">From lifting a single load to equipping an entire construction site — engineered in-house.</p>
+  </div>
+  <div class="prods">
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/construction-lift.jpg" alt=""></div><div class="body"><h3>Construction Lift Machine</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/hoist.jpg" alt=""></div><div class="body"><h3>Passenger cum Material Hoist</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/mast-platform.jpg" alt=""></div><div class="body"><h3>Mast Climbing Work Platform</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/bucket-lift.jpg" alt=""></div><div class="body"><h3>Bucket Type Lift (Wire Rope)</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/material-lift.jpg" alt=""></div><div class="body"><h3>Material Lift (Rack &amp; Pinion)</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/bar-bending.jpg" alt=""></div><div class="body"><h3>Bar Bending Machine</h3><div class="price">₹1 Lakh <span>/ piece</span></div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/mixer-onebag.jpg" alt=""></div><div class="body"><h3>One Bag Concrete Mixer</h3><div class="price">₹2.25 Lakh <span>/ piece</span></div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/mixer-halfbag.jpg" alt=""></div><div class="body"><h3>Half Bag Mixer (Diesel)</h3><div class="price">₹90,000 <span>/ piece</span></div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/scaffolding.jpg" alt=""></div><div class="body"><h3>H-Frame Scaffolding</h3><div class="price">₹5,500 <span>/ piece</span></div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/centering-plate.jpg" alt=""></div><div class="body"><h3>MS Centering Plate</h3><div class="price">₹100 <span>/ kg</span></div></div></a>
+    <a class="prod reveal" href="#products"><div class="img"><img src="assets/sushil/trolley.jpg" alt=""></div><div class="body"><h3>Platform Trolley</h3><div class="price">On request</div></div></a>
+    <a class="prod reveal" href="#contact" style="display:grid;place-items:center;background:var(--navy);color:#fff;border:0"><div class="body" style="text-align:center"><h3 style="color:#fff;font-size:18px">20+ more machines</h3><div class="price" style="color:rgba(255,255,255,.85)">Cranes · Threading · Sand Screening · Spares</div><span style="display:inline-block;margin-top:10px;color:#fff;font-weight:600;font-size:14px">Enquire for full list →</span></div></a>
+  </div>
+</div></section>
+
+<!-- WHY -->
+<section class="pad" id="why"><div class="wrap">
+  <div class="sec-head"><div class="eyebrow reveal">Why Sushilanand</div><h2 class="reveal d1">Machines you can rely on.</h2></div>
+  <div class="why">
+    <div class="why-item reveal"><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l6-3v3l6-3v3l6-3v15z"/></svg></div><h4>In-House Manufacturing</h4><p>Built in our own workshop, not just traded — quality we control end to end.</p></div>
+    <div class="why-item reveal d1"><div class="why-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h4>Timely Delivery</h4><p>Effective, on-time dispatch — because your site can't wait for equipment.</p></div>
+    <div class="why-item reveal d2"><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h4>Wide Range</h4><p>Lifts, hoists, mixers, bar machines, scaffolding &amp; spares — one supplier.</p></div>
+    <div class="why-item reveal d3"><div class="why-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg></div><h4>Group Strength</h4><p>Backed by Devji Industries' four decades of engineering &amp; foundry expertise.</p></div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIAL -->
+<section class="pad testi"><div class="wrap"><div class="card reveal">
+  <div class="qmark">&ldquo;</div>
+  <blockquote>Reliable machines and on-time delivery, every order. Sushilanand has become our go-to for construction lifts and mixers.</blockquote>
+  <div class="who">Site Contractor <span>· [Customer name — to be added]</span></div>
+</div></div></section>
+
+<!-- CONTACT -->
+<section class="pad" id="contact"><div class="wrap"><div class="contact-grid">
+  <div class="c-info">
+    <h2>Request a quote.</h2>
+    <p>Tell us what you need for your site — we'll get back with pricing and availability.</p>
+    <div class="c-line"><span class="ci"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b>2019, Rajarampuri 8th Lane</b><span>Kolhapur – 416008, Maharashtra</span></div></div>
+    <div class="c-line"><span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><b>Atul Patil</b><span>+91 __________ (number to be added)</span></div></div>
+    <div class="c-line"><span class="ci"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><b>Anup Patil</b><span>+91 __________ (number to be added)</span></div></div>
+    <div class="c-btns">
+      <a class="btn btn-wa" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5H6.7c-.2 0-.5.1-.7.3a3 3 0 0 0-1 2.4A5.5 5.5 0 0 0 6.2 12a12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3l-.5-.6zM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2z"/></svg> Chat on WhatsApp</a>
+      <a class="btn btn-ghost" style="border-color:rgba(255,255,255,.35);color:#fff" href="#">Call Us</a>
+    </div>
+  </div>
+  <div class="c-form">
+    <h3>Send an Enquiry</h3><p>We'll respond with pricing &amp; availability.</p>
+    <div class="field-row"><div class="field"><label>Name</label><input placeholder="Your name"></div><div class="field"><label>Phone</label><input placeholder="Mobile number"></div></div>
+    <div class="field"><label>Product</label><select><option>Construction Lift</option><option>Material / Passenger Hoist</option><option>Concrete Mixer</option><option>Bar Bending / Cutting Machine</option><option>Scaffolding / Centering</option><option>Material Handling</option><option>Other</option></select></div>
+    <div class="field"><label>Message</label><textarea rows="3" placeholder="Tell us your requirement / quantity."></textarea></div>
+    <a class="btn btn-primary" href="#">Send Enquiry →</a>
+  </div>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <div class="fb-name">Sushilanand Equipments</div>
+      <p>Manufacturer &amp; supplier of construction and material-handling equipment, Kolhapur.</p>
+      <a class="group" href="index.html">Part of the Devji Group ↗</a>
+    </div>
+    <div class="foot-col"><h4>Products</h4><a href="#products">Construction Lifts</a><a href="#products">Concrete Mixers</a><a href="#products">Bar Machines</a><a href="#products">Scaffolding</a></div>
+    <div class="foot-col"><h4>Contact</h4><p>2019, Rajarampuri 8th Lane,<br>Kolhapur – 416008</p><a href="#contact">Send an Enquiry</a><a href="index.html">Devji Industries ↗</a></div>
+  </div>
+  <div class="foot-bottom">© 2026 Sushilanand Equipments. All rights reserved. · Prototype preview</div>
+</div></footer>
+
+<a class="wa-float" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5H6.7c-.2 0-.5.1-.7.3a3 3 0 0 0-1 2.4A5.5 5.5 0 0 0 6.2 12a12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.6.2-1.2.2-1.3l-.5-.6zM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2z"/></svg></a>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>40);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const hamb=document.getElementById('hamb'),mnav=document.getElementById('mnav');
+  hamb.addEventListener('click',()=>mnav.classList.toggle('open'));
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mnav.classList.remove('open')));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
